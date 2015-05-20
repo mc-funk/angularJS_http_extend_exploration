@@ -1,0 +1,19 @@
+<div class="container" ng-controller="WelcomeController">
+    <div class="col-md-offset-2">
+        <div>
+            <h1>{{heading + message}}</h1>
+            <input ng-model="name" type="text" placeholder="Enter your name here">
+        </div>
+        <button ng-click="updateMessage()"  class="btn btn-info">Hello</button>
+        <button ng-click="goodByeMessage()" class="btn btn-info">Goodbye</button>
+        <button ng-click="grabinfo()"       class="btn btn-warn">Get Info</button>
+        <button ng-click="getJapan()"       class="btn btn-warn">Get Japan Info</button>
+        <button ng-click="testExtend()"     class="btn btn-warn">Get More Japan Info</button>
+        <div ng-repeat="someone in persons">
+            <h3>{{someone.name}}</h3>
+            <p>{{someone.money | currency}}</p>
+            <!--angular understands persons to be a variable available on the scope.-->
+        </div>
+        <div>{{japanStyle}}</div>
+    </div>
+</div>
